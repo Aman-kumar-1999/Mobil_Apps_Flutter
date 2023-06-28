@@ -1,3 +1,117 @@
+// import 'dart:convert';
+// import 'dart:html';
+//
+// import 'package:eqipped_test/BaseUrl.dart';
+// import 'package:flutter/material.dart';
+// import 'package:http/http.dart' as http;
+//
+// class Product {
+//   final String productId;
+//
+//   final String vendorId;
+//
+//   final DateTime date;
+//
+//   final String vendorName;
+//
+//   final String vendorEmail;
+//
+//   final String productName; // product Type also
+//
+//   final String productDescription;
+//   final String category;
+//
+//   final String brandName;
+//
+//   final double productQuantity; // no. of products
+//
+//   final int individualProductPrice;
+//
+//   final int TotalProductPrice;
+//
+//   final int natePriceWithDiscount;
+//
+//   final int discountPercentage;
+//
+//   final String status;
+//
+//   final String action;
+//
+//   final String imageName;
+//
+//   final String imagePath;
+//
+//   final String bulkCode;
+//
+//   final String variationName;
+//
+//   final String variationId;
+//
+//   final int gst;
+//
+//   final String hsn;
+//
+//   final String isVerified;
+//
+//   final String tierNo;
+//
+//   final String containLiquid;
+//
+//   Product({
+//     required  this.productId,
+//
+//     required  this.vendorId,
+//
+//     required  this.date,
+//
+//     required  this.vendorName,
+//
+//     required  this.vendorEmail,
+//
+//     required  this.productName, // product Type also
+//
+//     required  this.productDescription,
+//     required  this.category,
+//
+//     required  this.brandName,
+//
+//     required this.productQuantity, // no. of products
+//
+//     required this.individualProductPrice,
+//
+//     required this.TotalProductPrice,
+//
+//     required this.natePriceWithDiscount,
+//
+//     required this.discountPercentage,
+//
+//     required  this.status,
+//
+//     required  this.action,
+//
+//     required  this.imageName,
+//
+//     required  this.imagePath,
+//
+//     required  this.bulkCode,
+//
+//     required  this.variationName,
+//
+//     required  this.variationId,
+//
+//     required this.gst,
+//
+//     required  this.hsn,
+//
+//     required  this.isVerified,
+//
+//     required  this.tierNo,
+//
+//     required  this.containLiquid,
+//   });
+// }
+
+
 import 'package:flutter/material.dart';
 
 class Product {
@@ -22,8 +136,6 @@ class Product {
 }
 
 // Our demo Products
-
-
 
 List<Product> demoProducts = [
   Product(
@@ -100,6 +212,10 @@ List<Product> demoProducts = [
     isFavourite: true,
   ),
 ];
+
+
+
+
 
 const String description =
     "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";

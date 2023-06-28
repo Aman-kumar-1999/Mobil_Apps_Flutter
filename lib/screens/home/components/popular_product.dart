@@ -16,7 +16,8 @@ class ProductsPage extends StatefulWidget {
 }
 
 class _PopularProducts extends State<ProductsPage> {
-
+  double _drawerIconSize = 24;
+  double _drawerFontSize = 17;
   @override
   void initState() {
     super.initState();
@@ -24,7 +25,9 @@ class _PopularProducts extends State<ProductsPage> {
 
   }
 
-  late List<dynamic> products;
+  // late List<dynamic> products=[];
+  String jsonProducts = "";
+  // static List<dynamic> products = [];
 
   void fetchProductData() async {
     var url = Uri.parse('${BaseUrl.URL}/product/category/Equipments');
@@ -36,10 +39,17 @@ class _PopularProducts extends State<ProductsPage> {
         // Request successful, parse the response body
 
         List<dynamic> responseBody = jsonDecode(response.body);
+        // products.addAll(responseBody);
         // Process the response data as needed
         // print("Data ${responseBody}");
-        products = responseBody;
-        print("Product : ${products}");
+
+        // for(int i=0;i<responseBody.length;i++){
+        //   print("prod : ${responseBody[i]['productId']}");
+        //
+        // }
+
+        // productMap =
+        // print("Product : ${products}");
       } else {
         // Request failed, handle the error
         print('Request failed with status: ${response.statusCode}.');
@@ -49,8 +59,6 @@ class _PopularProducts extends State<ProductsPage> {
       print('Error: $e');
     }
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -66,13 +74,17 @@ class _PopularProducts extends State<ProductsPage> {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
+
+
+
               ...List.generate(
                 demoProducts.length,
-                (index) {
-                  if (demoProducts[index].isPopular)
+                    (index) {
+                  if (demoProducts[index].isPopular) {
                     return ProductCard(product: demoProducts[index]);
+                  }
 
-                  return SizedBox.shrink(); // here by default width and height is 0
+                  return const SizedBox.shrink(); // here by default width and height is 0
                 },
               ),
               SizedBox(width: getProportionateScreenWidth(20)),

@@ -28,7 +28,7 @@ class _ProductImagesState extends State<ProductImages> {
             aspectRatio: 1,
             child: Hero(
               tag: widget.product.id.toString(),
-              child: Image.asset(widget.product.images[selectedImage]),
+              child: Image.asset(widget.product.images[0]),
             ),
           ),
         ),

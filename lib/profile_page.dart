@@ -89,6 +89,8 @@ class _ProfilePageState extends State<ProfilePage> {
     }
   }
 
+
+
   Image appLogo = const Image(
       image: ExactAssetImage("assets/images/eqippedLogo.png"),
       height: 150.0,
